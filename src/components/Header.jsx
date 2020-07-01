@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import "./static/css/Header.css";
 
 class Header extends Component {
-  state = {};
+  state = {
+    name: "Richard Okonicha",
+  };
   render() {
     return (
       <div>
         <header>
           <h1>
-            Richard Okonicha <br></br>
+            {this.state.name} <br></br>
             <span>[ Backend Developer ]</span>
           </h1>
         </header>
