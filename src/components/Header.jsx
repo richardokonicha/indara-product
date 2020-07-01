@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./static/css/Header.css";
 
 class Header extends Component {
   state = {};
@@ -7,7 +8,8 @@ class Header extends Component {
       <div>
         <header>
           <h1>
-            Balkan Style <span>[ Portfolio Gallery ]</span>
+            Richard Okonicha <br></br>
+            <span>[ Backend Developer ]</span>
           </h1>
         </header>
       </div>
