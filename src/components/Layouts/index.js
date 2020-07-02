@@ -1,5 +1,5 @@
-import Header from "./Header";
+import Header1 from "./Header1";
 import Footer from "./Footer";
-import Nav from "./Nav";
+import Header2 from "./Header2";
 
-export { Header, Footer, Nav };
+export { Header2 as Header, Footer, Header1 };
