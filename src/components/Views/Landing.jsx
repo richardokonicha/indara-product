@@ -16,6 +16,14 @@ const useStyles = makeStyles({
     padding: 30,
     marginTop: 10,
   },
+  media: {
+    width: "100%",
+    // paddingTop: "56.25%", // 16:9
+    borderRadius: "50%",
+    height: "100%",
+    // width: "100px",
+    maxWidth: "300px",
+  },
 });
 
 function PaperText(props) {
@@ -42,8 +50,14 @@ function PaperImage(props) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.paper}>
-      <CardMedia src="https://res.cloudinary.com/konichar/image/upload/v1594138774/prpfilegithu_i35wuq.png"></CardMedia>
+    <Card align="center">
+      <img
+        className={classes.media}
+        src="https://res.cloudinary.com/konichar/image/upload/v1594138774/prpfilegithu_i35wuq.png"
+        alt=""
+        srcset=""
+      />
+      {/* <CardMedia src="https://res.cloudinary.com/konichar/image/upload/v1594138774/prpfilegithu_i35wuq.png"></CardMedia> */}
     </Card>
   );
 }
