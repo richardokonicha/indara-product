@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import NavBar from "./NavBar";
+import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     willChange: "transform",
     backgroundBlendMode: "lighten",
     height: "4rem",
+    boxShadow: "none",
     //   borderTop: "2px solid rgba(143,196,248,.938)",
     //   padding: "1rem"
   },
@@ -34,13 +36,17 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="secondary" className={classes.appbar}>
-        <Toolbar>
-          <Typography variant="title" color="inherit">
-            konichar
-          </Typography>
-          <NavBar />
-        </Toolbar>
+      <AppBar position="static" color="primary" className={classes.appbar}>
+        <Container maxWidth={"md"}>
+          <Toolbar>
+            <NavBar />
+            <Button>
+              <Typography variant="title" color="inherit">
+                konichar
+              </Typography>
+            </Button>
+          </Toolbar>
+        </Container>
       </AppBar>
     </div>
   );

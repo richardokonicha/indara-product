@@ -3,6 +3,23 @@ import React, { Component } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Header } from "./components/Layouts";
 import Landing from "./components/Views/Landing";
+import Container from "@material-ui/core/Container";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
+import { purple } from "@material-ui/core/colors";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      // Purple and green play nicely together.
+      main: "#FFFFFF",
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: "#11cb5f",
+    },
+  },
+});
 
 class App extends Component {
   state = {};
@@ -10,8 +27,12 @@ class App extends Component {
     return (
       <React.Fragment>
         <CssBaseline />
-        <Header />
-        <Landing />
+        <ThemeProvider theme={theme}>
+          <Header />
+          <Container maxWidth={"md"} style={{ padding: 0 }}>
+            <Landing />
+          </Container>
+        </ThemeProvider>
       </React.Fragment>
     );
   }
