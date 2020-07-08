@@ -1,0 +1,18 @@
+.Bot1 {
+  margin: 2px;
+  background-color: red;
+  background-color: seagreen;
+}
+
+.Bot2 {
+  padding: 2px;
+  background-color: rosybrown;
+  font-size: 50px;
+  height: 40vmin;
+
+  border: 5px dotted pink;
+}
+
+H1 {
+  color: red;
+}
