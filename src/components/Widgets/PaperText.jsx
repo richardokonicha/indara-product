@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import makeStyles from "@material-ui/styles/makeStyles";
 
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -6,9 +6,6 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import {
-  Card,
-  CardActionArea,
-  CardMedia,
   CardContent,
   Typography,
   Button,
