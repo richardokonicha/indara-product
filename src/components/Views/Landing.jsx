@@ -43,10 +43,10 @@ class Landing extends Component {
             alignItems="center"
             style={{ height: "80vh" }}
           >
-            <Grid item md={6} sm={12}>
+            <Grid item sm={6} xs={12}>
               <PaperText />
             </Grid>
-            <Grid item md={6} sm={12}>
+            <Grid item sm={6} xs={12}>
               <PaperImage />
             </Grid>
           </Grid>

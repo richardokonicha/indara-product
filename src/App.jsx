@@ -16,8 +16,11 @@ const theme = createMuiTheme({
     },
     secondary: {
       // This is green.A700 as hex.
-      main: "#11cb5f",
+      main: "#4E342E",
     },
+    accent: {
+      main: "#949090"
+    }
   },
 });
 

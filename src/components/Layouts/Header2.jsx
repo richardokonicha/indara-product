@@ -29,6 +29,17 @@ const useStyles = makeStyles((theme) => ({
     //   borderTop: "2px solid rgba(143,196,248,.938)",
     //   padding: "1rem"
   },
+  nameLogo: {
+    textTransform: 'lowercase',
+    fontFamily: "montserrat",
+    fontWeight: "600",
+  },
+  toolbar: {
+    minHeight: 128,
+    alignItems: 'center',
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(2),
+  },
 }));
 
 export default function ButtonAppBar() {
@@ -38,10 +49,11 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static" color="primary" className={classes.appbar}>
         <Container maxWidth={"md"}>
-          <Toolbar>
-            <NavBar />
+          <Toolbar className={classes.toolbar}>
+            <NavBar/>
+            <div className={classes.title} />
             <Button>
-              <Typography variant="title" color="inherit">
+              <Typography variant="h6"  color="secondary" className={classes.nameLogo}>
                 konichar
               </Typography>
             </Button>

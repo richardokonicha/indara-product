@@ -6,14 +6,25 @@ import TypoGraphy from "@material-ui/core/Typography";
 // import BrightnessIcon from "@material-ui/icons/Brightness";
 import NightsStayIcon from "@material-ui/icons/NightsStay";
 import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+
+
+const useStyles = makeStyles({
+  navText: {
+    fontSize: "0.65rem",
+    fontFamily: "montserrat",
+
+  }
+})
 
 function NavBar(props) {
+  const classess = useStyles()
   return (
-    <List component="nav">
-      <ListItem component="div" style={{ paddingLeft: 0 }}>
+    <List component="nav" >
+      <ListItem component="div" style={{ paddingLeft: 0}} >
         <ListItemText button>
           <Button>
-            <TypoGraphy color="inherit" variant="title">
+            <TypoGraphy color="accent"  className={classess.navText} variant='overline'>
               PORTFOLIO
             </TypoGraphy>
           </Button>
@@ -21,7 +32,7 @@ function NavBar(props) {
 
         <ListItemText inset>
           <Button>
-            <TypoGraphy color="inherit" variant="title">
+            <TypoGraphy color="accent" variant="title" className={classess.navText} variant='overline'>
               CONTACT ME
             </TypoGraphy>
           </Button>
@@ -29,15 +40,15 @@ function NavBar(props) {
 
         <ListItemText inset>
           <Button>
-            <TypoGraphy color="inherit" variant="title">
+            <TypoGraphy color="accent" variant="title" className={classess.navText} variant='overline'>
               RESUME
             </TypoGraphy>
           </Button>
         </ListItemText>
 
-        <ListItemText inset>
+        <ListItemText inset >
           <Button>
-            <NightsStayIcon />
+            <NightsStayIcon color="accent"  className={classess.navText} />
           </Button>
         </ListItemText>
       </ListItem>

@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     borderRadius: "50%",
     height: "100%",
     // width: "100px",
-    maxWidth: "200px",
+    maxWidth: "300px",
   },
 });
 
@@ -29,11 +29,11 @@ function PaperImage(props) {
   const classes = useStyles();
 
   return (
-    <div align="end" className={classes.paper}>
+    <div align="center" className={classes.paper}>
       <img
         className={classes.media}
         src="https://res.cloudinary.com/konichar/image/upload/v1594138774/prpfilegithu_i35wuq.png"
-        alt=""
+        alt="Image of Richard Okonicha"
         srcset=""
       />
       {/* <CardMedia src="https://res.cloudinary.com/konichar/image/upload/v1594138774/prpfilegithu_i35wuq.png"></CardMedia> */}
