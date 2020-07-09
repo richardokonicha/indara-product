@@ -6,7 +6,6 @@ import Landing from "./components/Views/Landing";
 import Container from "@material-ui/core/Container";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import { purple } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {

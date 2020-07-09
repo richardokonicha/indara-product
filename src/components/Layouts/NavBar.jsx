@@ -32,7 +32,7 @@ function NavBar(props) {
 
         <ListItemText inset>
           <Button>
-            <TypoGraphy color="accent" variant="title" className={classess.navText} variant='overline'>
+            <TypoGraphy color="accent" className={classess.navText} variant='overline'>
               CONTACT ME
             </TypoGraphy>
           </Button>
@@ -40,7 +40,7 @@ function NavBar(props) {
 
         <ListItemText inset>
           <Button>
-            <TypoGraphy color="accent" variant="title" className={classess.navText} variant='overline'>
+            <TypoGraphy color="accent" className={classess.navText} variant='overline'>
               RESUME
             </TypoGraphy>
           </Button>

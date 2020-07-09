@@ -1,14 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import makeStyles from "@material-ui/styles/makeStyles";
-import {
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  Typography,
-  Button,
-  CardActions,
-} from "@material-ui/core";
 
 const useStyles = makeStyles({
   paper: {
@@ -33,7 +24,7 @@ function PaperImage(props) {
       <img
         className={classes.media}
         src="https://res.cloudinary.com/konichar/image/upload/v1594138774/prpfilegithu_i35wuq.png"
-        alt="Image of Richard Okonicha"
+        alt="Richard Okonicha"
         srcset=""
       />
       {/* <CardMedia src="https://res.cloudinary.com/konichar/image/upload/v1594138774/prpfilegithu_i35wuq.png"></CardMedia> */}
