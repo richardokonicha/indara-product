@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 // import Header from "./components/Layouts/Header";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Header } from "./components/Layouts";
-import Landing from "./components/Views/Landing";
+// import { Header } from "./components/Layouts";
+// import Landing from "./components/Views/Landing";
 import Container from "@material-ui/core/Container";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
+import Meet from "./components/Views/Meet/Meet";
 
 const theme = createMuiTheme({
   palette: {
@@ -18,8 +19,8 @@ const theme = createMuiTheme({
       main: "#4E342E",
     },
     accent: {
-      main: "#949090"
-    }
+      main: "#949090",
+    },
   },
 });
 
@@ -28,13 +29,15 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <CssBaseline />
-        <ThemeProvider theme={theme}>
-          <Header />
-          <Container maxWidth={"md"} style={{ padding: 0 }}>
-            <Landing />
-          </Container>
-        </ThemeProvider>
+        {/* <CssBaseline /> */}
+        {/* <ThemeProvider theme={theme}> */}
+        {/* <Header /> */}
+        <Meet />
+
+        {/* <Container maxWidth={"md"} style={{ padding: 0, backgroundColor:'red' }}>
+            <Landing style={{ backgroundColor:'red' }}/>
+          </Container> */}
+        {/* </ThemeProvider> */}
       </React.Fragment>
     );
   }

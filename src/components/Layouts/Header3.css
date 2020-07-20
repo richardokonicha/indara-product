@@ -1,0 +1,112 @@
+
+
+.gb_sa .gb_3d.gb_be.gb_ce {
+    min-width: 0;
+}
+.gb_sa.gb_ae .gb_3d {
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+.gb_sa:not(.gb_ta) .gb_3d {
+    padding: 8px;
+}
+.gb_le {
+    -webkit-transition: background-color .4s;
+    transition: background-color .4s;
+}
+.gb_3d {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    min-width: -webkit-min-content;
+    min-width: min-content;
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.gb_4a:not(.gb_0d) {
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    z-index: 986;
+}
+.gb_sa {
+    color: black;
+    min-width: 320px;
+    position: relative;
+    -webkit-transition: box-shadow 250ms;
+    transition: box-shadow 250ms;
+}
+body {
+    --mdc-font-size: 2vmin;
+    --gm-button--font-size: 1em;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    -webkit-user-select: none;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    height: 100%;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0,0,0,0.87);
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    margin: 0;
+    text-size-adjust: 100%;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    height: 8px;
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border: none;
+    box-shadow: none;
+    background: #dadce0;
+    border-radius: 4px;
+    min-height: 40px;
+}
+/* //...................... */
+
+.gb_sa.gb_ta .gb_9c, .gb_3d.gb_be.gb_ce>.gb_9c {
+    /* -webkit-flex: 1 1 auto; */
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+.gb_9c {
+    padding-right: 30px;
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+    /* -webkit-flex: 1 0 auto; */
+    /* flex: 1 0 auto; */
+}
+.gb_2c {
+    height: 48px;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-box-align: center;
+    /* -webkit-align-items: center; */
+    align-items: center;
+    /* display: -webkit-box; */
+    /* display: -webkit-flex; */
+    display: flex;
+    /* -webkit-user-select: none; */
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
