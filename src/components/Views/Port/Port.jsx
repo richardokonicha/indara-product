@@ -17,7 +17,7 @@ export default function Meet() {
                 We re-engineered the service we built for secure business
                 meetings, Google Meet, to make it free and available for all.
               </div>
-              <div className="Ez8Iud">
+              <div className="Port-main__container_btninput">
                 <button
                   className="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe cjtUbb Dg7t5c"
                   autofocus="autofocus"
@@ -64,14 +64,14 @@ export default function Meet() {
                   </div>
                 </div>
               </div>
-              <div className="Vctqkd"></div>
-              <div className="bpZLge">
-                <span className="GNpa5c">
+              <div className="Port-line"></div>
+              <div className="Port-main__container_link">
+                <span className="Port_Pointer">
                   <a
                     href="https://meet.google.com/about/redirect/landing-learn-more/?hl=en"
                     target="_blank"
                     rel="noopener"
-                    className="IClWHc"
+                    className="Port-alink"
                   >
                     Learn more
                   </a>

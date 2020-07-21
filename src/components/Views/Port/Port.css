@@ -64,6 +64,46 @@
   max-width: 30rem;
   padding-bottom: 3em;
 }
+.Port-main__container_btninput {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+}
+.Port-main__container_link {
+  letter-spacing: 0.00625em;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding-top: 1.5em;
+  color: #5f6368;
+  color: var(--gm-color-caption, #5f6368);
+}
+.Port_Pointer {
+  cursor: pointer;
+}
+
+.Port-alink {
+  color: #00796b;
+  color: var(--gm-theme-color);
+}
+.Port-alink:active,
+.Port-alink:hover {
+  text-decoration: underline;
+}
+.Port-alink:focus {
+  outline: 0.3125rem solid rgb(59, 153, 252);
+  outline: 0.3125rem auto -webkit-focus-ring-color;
+  outline-offset: 2px;
+}
+.Port-line {
+  margin-top: 1em;
+  border-bottom: 1px solid;
+  align-self: stretch;
+  max-width: 42rem;
+  border-color: #dadce0;
+  border-color: var(--gm-hairline-color, #dadce0);
+}
 
 @media screen and (max-aspect-ratio: 3/4), only screen and (max-width: 60rem) {
   .Port-main__scaler {
@@ -83,8 +123,11 @@
   .Qcuypc .bpZLge,
   .Port-main__container_textH1,
   .Port-main__container_textP1,
-  .Vctqkd.WUqVOc {
+  .Port-line.WUqVOc {
     display: none;
+  }
+  .Port-main__container_btninput {
+    align-self: stretch;
   }
 }
 @media screen and (max-aspect-ratio: 3/4) and (min-height: 64rem),
@@ -121,9 +164,10 @@
   }
   .Port-main__container_textH1,
   .Port-main__container_textP1,
-  .Vctqkd.WUqVOc {
+  .Port-line.WUqVOc {
     display: block;
   }
+
   .Port-main__container_textH1 {
     max-width: 100%;
   }
