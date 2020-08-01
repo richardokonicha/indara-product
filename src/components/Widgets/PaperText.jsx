@@ -5,8 +5,8 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import TelegramIcon from "@material-ui/icons/Telegram";
-import IconButton from '@material-ui/core/IconButton';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import IconButton from "@material-ui/core/IconButton";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import {
   CardContent,
   Typography,
@@ -14,7 +14,7 @@ import {
   CardActions,
 } from "@material-ui/core";
 
-const useStyles = makeStyles( (theme) =>({
+const useStyles = makeStyles((theme) => ({
   paper: {
     padding: 30,
     // marginTop: 10,
@@ -37,22 +37,20 @@ const useStyles = makeStyles( (theme) =>({
     fontFamily: "Montserrat",
     marginTop: "20px",
     marginBottom: "20px",
-    color: "secondary"
+    color: "secondary",
   },
   icon: {
     fontSize: "0.8rem",
     color: "secondary",
     // marginRight: "0.7rem",
-    marginRight: theme.spacing(1),
-    marginTop: "0.8rem"
-
+    // marginRight: theme.spacing(1),
+    marginTop: "0.8rem",
   },
   btn: {
     fontSize: "0.5rem",
     fontFamily: "Montserrat",
     fontWeight: "500",
-
-  }
+  },
 }));
 
 function PaperText(props) {
@@ -70,28 +68,42 @@ function PaperText(props) {
         >
           I develop modern full stack web application <br></br>Frontend & APIs
         </Typography>
-        <div >
+        <div>
           <IconButton color="secondary" aria-label="Follow me on github">
-             <GitHubIcon className={classes.icon} color="secondary"/>
+            <GitHubIcon className={classes.icon} color="secondary" />
           </IconButton>
 
           <IconButton color="secondary" aria-label="Reach me on Twitter">
-          <TwitterIcon className={classes.icon} />
+            <TwitterIcon className={classes.icon} />
           </IconButton>
 
           <IconButton color="secondary" aria-label="Contact me on LinkedIn">
-          <LinkedInIcon className={classes.icon} color="secondary"/>
+            <LinkedInIcon className={classes.icon} color="secondary" />
           </IconButton>
 
           <IconButton color="secondary" aria-label="contact me on Telegram">
-          <TelegramIcon className={classes.icon} color="secondary"/>
+            <TelegramIcon className={classes.icon} color="secondary" />
           </IconButton>
         </div>
       </CardContent>
       <CardActions>
-        <Button variant="contained" disableElevation style={{ borderRadius: 0, padding: "0.6rem 1.5rem"}} size="small" endIcon={<ArrowForwardIosIcon color="secondary" style={{ fontSize: 8 }} />}>
-         <Typography variant="button" display="block" color="secondary" className={classes.btn}>Explore 
-        </Typography>
+        <Button
+          variant="contained"
+          disableElevation
+          style={{ borderRadius: 0, padding: "0.6rem 1.5rem" }}
+          size="small"
+          endIcon={
+            <ArrowForwardIosIcon color="secondary" style={{ fontSize: 8 }} />
+          }
+        >
+          <Typography
+            variant="button"
+            display="block"
+            color="secondary"
+            className={classes.btn}
+          >
+            Explore
+          </Typography>
         </Button>
       </CardActions>
     </div>

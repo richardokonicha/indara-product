@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 // import Header from "./components/Layouts/Header";
 import CssBaseline from "@material-ui/core/CssBaseline";
-// import { Header } from "./components/Layouts";
+import { Header } from "./components/Layouts";
 // import Landing from "./components/Views/Landing";
 import Container from "@material-ui/core/Container";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import Meet from "./components/Views/Port/Port";
+import Portfolio from "./components/Views/Portfolio";
 
 const theme = createMuiTheme({
   palette: {
@@ -32,7 +32,7 @@ class App extends Component {
         {/* <CssBaseline /> */}
         {/* <ThemeProvider theme={theme}> */}
         {/* <Header /> */}
-        <Meet />
+        <Portfolio />
 
         {/* <Container maxWidth={"md"} style={{ padding: 0, backgroundColor:'red' }}>
             <Landing style={{ backgroundColor:'red' }}/>
