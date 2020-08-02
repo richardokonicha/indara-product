@@ -1,29 +1,45 @@
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // # if the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    //   prints a media query based on the vaule
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  //   if keys doesn't exist warn
+  @else {
+    @warn "Unfortunately no value retrieved from #breakpoint "
+            + "Available breakpoints are: #{map-keys($breakpoints)}";
+  }
+}
+
 .Port-main {
   min-height: 100%;
   height: auto;
   position: relative;
 }
-
 .Port-main.eejsDc {
   min-height: 100%;
   overflow-y: hidden;
   -webkit-overflow-scrolling: auto;
 }
-
 .Heigh {
   height: 56px;
 }
-
 @media (min-width: 600px) {
   .Heigh {
     height: 64px;
   }
 }
-
 .uirfo .Heigh {
   height: 0;
 }
-
 .Port-main__scaler {
   height: calc(100vh - 64px);
   min-height: 100%;
@@ -32,62 +48,45 @@
   max-width: 100%;
   overflow-x: hidden;
   font-size: 1rem;
-  -webkit-animation: 0.5s ease-in fadeIn 0s forwards;
-          animation: 0.5s ease-in fadeIn 0s forwards;
+  animation: 0.5s ease-in fadeIn 0s forwards;
   /* opacity: 0; */
 }
-
 .Port-main__container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   min-height: 100%;
   width: 100%;
-}
 
-@media (max-width: 767px) {
-  .Port-main__container .MuiCardActions-root {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .MuiCardActions-root {
+    @include respond-to("small") {
+      justify-content: center;
+    }
   }
-}
 
-@media (max-width: 767px) {
-  .Port-main__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  @include respond-to("large") {
+    // background-color: red;
+  }
+  @include respond-to("small") {
+    // background-color: blue;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
     text-align: center;
   }
+  @include respond-to("medium") {
+    // background-color: purple;
+  }
 }
-
 .Port-main__container_text {
   display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-preferred-size: 35rem;
-      flex-basis: 35rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
+  flex-basis: 35rem;
+  flex-direction: column;
+  flex-shrink: 1;
   max-width: 35rem;
   padding: 1em 3em;
 }
-
 .Port-main__container_textH1 {
   font-family: "Google Sans Display", Roboto, Arial, sans-serif;
   font-size: 2.75rem;
@@ -96,7 +95,6 @@
   line-height: 3.25rem;
   padding-bottom: 0.5em;
 }
-
 .Port-main__container_textP1 {
   font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 1.125rem;
@@ -108,17 +106,11 @@
   max-width: 30rem;
   padding-bottom: 3em;
 }
-
 .Port-main__container_btninput {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  flex-wrap: wrap;
+  align-self: flex-start;
 }
-
 .Port-main__container_link {
   letter-spacing: 0.00625em;
   font-family: Roboto, Arial, sans-serif;
@@ -129,7 +121,6 @@
   color: #5f6368;
   color: var(--gm-color-caption, #5f6368);
 }
-
 .Port_Pointer {
   cursor: pointer;
 }
@@ -138,45 +129,38 @@
   color: #00796b;
   color: var(--gm-theme-color);
 }
-
 .Port-alink:active,
 .Port-alink:hover {
   text-decoration: underline;
 }
-
 .Port-alink:focus {
-  outline: 0.3125rem solid #3b99fc;
+  outline: 0.3125rem solid rgb(59, 153, 252);
   outline: 0.3125rem auto -webkit-focus-ring-color;
   outline-offset: 2px;
 }
-
 .Port-line {
   margin-top: 1em;
   border-bottom: 1px solid;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  align-self: stretch;
   max-width: 42rem;
   border-color: #dadce0;
   border-color: var(--gm-hairline-color, #dadce0);
 }
 
-@media screen and (max-aspect-ratio: 3 / 4), only screen and (max-width: 60rem) {
+@media screen and (max-aspect-ratio: 3/4), only screen and (max-width: 60rem) {
   .Port-main__scaler {
     height: calc(100vh - 56px);
   }
   .Port-main__container_text,
   .C9bDzc {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-basis: auto;
+    flex-shrink: 0;
     max-width: 39rem;
+    // width: 100%;
   }
   .Port-main__container_text {
     padding: 1rem 3%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
   }
   .Qcuypc .bpZLge,
   .Port-main__container_textH1,
@@ -185,27 +169,18 @@
     display: none;
   }
   .Port-main__container_btninput {
-    -ms-flex-item-align: stretch;
-        -ms-grid-row-align: stretch;
-        align-self: stretch;
+    align-self: stretch;
   }
 }
-
-@media screen and (max-aspect-ratio: 3 / 4) and (min-height: 64rem), only screen and (max-width: 60rem) and (min-height: 64rem) {
+@media screen and (max-aspect-ratio: 3/4) and (min-height: 64rem),
+  only screen and (max-width: 60rem) and (min-height: 64rem) {
   .Port-main__scaler {
     height: calc(100vh - 64px);
   }
   .Port-main__container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     width: calc(100% - 2rem);
     padding: 0 1rem;
   }
@@ -213,11 +188,9 @@
     padding-bottom: 3rem;
   }
 }
-
 @media only screen and (min-width: 160rem) and (min-height: 75rem) {
   .Port-main__scaler {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
   }
   .Port-main__container {
     margin-left: 17vw;
@@ -225,11 +198,10 @@
   }
 }
 
-@media screen and (max-aspect-ratio: 3 / 4) and (min-height: 32rem), only screen and (max-width: 60rem) and (min-height: 32rem) {
+@media screen and (max-aspect-ratio: 3/4) and (min-height: 32rem),
+  only screen and (max-width: 60rem) and (min-height: 32rem) {
   .Qcuypc {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     text-align: center;
   }
   .Port-main__container_textH1,
@@ -237,12 +209,13 @@
   .Port-line.WUqVOc {
     display: block;
   }
+
   .Port-main__container_textH1 {
     max-width: 100%;
   }
+
   .Port-main__container_textP1 {
     max-width: 100%;
     padding-bottom: 1.5rem;
   }
 }
-/*# sourceMappingURL=Portfolio.css.map */
