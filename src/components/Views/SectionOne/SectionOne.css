@@ -50,7 +50,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  padding: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -92,5 +92,10 @@ h1 {
 
 .pantone-card--conch {
   background-color: #c0d5cf;
+}
+
+.SectionOne__ImageIss {
+  width: 100%;
+  border-radius: 0.3rem;
 }
 /*# sourceMappingURL=SectionOne.css.map */
