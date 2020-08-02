@@ -1,0 +1,35 @@
+$primary: #f50057;
+$secondary: blue;
+$accent: yellow;
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // # if the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    //   prints a media query based on the vaule
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  //   if keys doesn't exist warn
+  @else {
+    @warn "Unfortunately no value retrieved from #breakpoint "
+            + "Available breakpoints are: #{map-keys($breakpoints)}";
+  }
+}
+
+.wrapper {
+  background-color: $primary;
+  color: $accent;
+  text-align: center;
+  height: 80vh;
+  display: block;
+
+  @include respond-to("small") {
+    background-color: $secondary;
+  }
+}

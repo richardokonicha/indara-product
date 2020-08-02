@@ -7,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import Portfolio from "./components/Views/Portfolio";
+import SectionOne from "./components/Views/SectionOne";
 
 const theme = createMuiTheme({
   palette: {
@@ -33,6 +34,10 @@ class App extends Component {
         {/* <ThemeProvider theme={theme}> */}
         {/* <Header /> */}
         <Portfolio />
+        {/* <Header /> */}
+        <SectionOne />
+        <SectionOne />
+        <SectionOne />
 
         {/* <Container maxWidth={"md"} style={{ padding: 0, backgroundColor:'red' }}>
             <Landing style={{ backgroundColor:'red' }}/>

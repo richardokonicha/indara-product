@@ -1,0 +1,14 @@
+.wrapper {
+  background-color: #f50057;
+  color: yellow;
+  text-align: center;
+  height: 80vh;
+  display: block;
+}
+
+@media (min-width: 767px) {
+  .wrapper {
+    background-color: blue;
+  }
+}
+/*# sourceMappingURL=SectionOne.css.map */

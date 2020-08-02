@@ -88,6 +88,7 @@ function PaperText(props) {
       </CardContent>
       <CardActions>
         <Button
+          href="#sectionOne"
           variant="contained"
           disableElevation
           style={{ borderRadius: 0, padding: "0.6rem 1.5rem" }}
