@@ -13,7 +13,15 @@ export default function SectionOne() {
           </div>
           <div className="SectionOne__grid__item">
             <article className="pantone-card pantone-card--vanilla-ice">
-              <h1 className="pantone-card__name">this is the beginning</h1>
+              {/* <h1 className="pantone-card__name">
+
+              </h1> */}
+              <img
+                className="SectionOne__ImageIss"
+                src="https://res.cloudinary.com/konichar/image/upload/v1596406145/ISS_yxxr05.png"
+                alt=""
+                srcset=""
+              />
             </article>
           </div>
           <div className="SectionOne__grid__item">
