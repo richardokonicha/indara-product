@@ -1,3 +1,18 @@
+// Settings
+$white: #fff;
+$black: #000;
+$wild-sand: #f5f3f3;
+$french-gray: #cecdcf;
+$vanilla-ice: #f5dadf;
+$mischka: #e2e0e3;
+$givry: #f9dbc6;
+$bon-jour: #edebed;
+$jagged-ice: #c3e5e9;
+$shadow-green: #99c4c8;
+$conch: #c0d5cf;
+$gray-nurse: #e2e8de;
+$pampas: #f2ece8;
+
 $primary: #f50057;
 $secondary: blue;
 $accent: yellow;
@@ -23,13 +38,86 @@ $breakpoints: (
 }
 
 .wrapper {
-  background-color: $primary;
+  background-color: $french-gray;
   color: $accent;
   text-align: center;
-  height: 80vh;
+  // height: 80vh;
   display: block;
 
   @include respond-to("small") {
-    background-color: $secondary;
+    background-color: $wild-sand;
+  }
+}
+
+// the grid css starts here
+
+// body {
+//   background-color: $wild-sand;
+// }
+
+h1 {
+  color: $conch;
+  //   border: 2px solid black;
+}
+
+.SectionOne__container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px;
+
+  //   background-color: blueviolet;
+}
+
+.SectionOne__grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(30, 150px);
+
+  &__item {
+    &:nth-child(2n) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+}
+
+.pantone-card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+  &__name {
+    color: $white;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  &--vanilla-ice {
+    background-color: $vanilla-ice;
+  }
+  &--mischka {
+    background-color: $mischka;
+  }
+  &--french-gray {
+    background-color: $french-gray;
+  }
+  &--givry {
+    background-color: $givry;
+  }
+  &--bon-jour {
+    background-color: $bon-jour;
+  }
+  &--jagged-ice {
+    background-color: $jagged-ice;
+  }
+  &--shadow-green {
+    background-color: $shadow-green;
+  }
+  &--conch {
+    background-color: $conch;
   }
 }
