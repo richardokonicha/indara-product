@@ -6,8 +6,9 @@ import { Header } from "./components/Layouts";
 import Container from "@material-ui/core/Container";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import Portfolio from "./components/Views/Portfolio";
+import Portfolio from "./components/Views/Portfolio/Portfolio";
 import SectionOne from "./components/Views/SectionOne";
+import SectionPort from "./components/Views/SectionPort";
 
 const theme = createMuiTheme({
   palette: {
@@ -33,10 +34,12 @@ class App extends Component {
         {/* <CssBaseline /> */}
         {/* <ThemeProvider theme={theme}> */}
         {/* <Header /> */}
-        <Portfolio />
+        {/* <Portfolio /> */}
         {/* <Header /> */}
+        <SectionPort />
         <SectionOne />
-        <div style={{ height: "40vh", background: "red" }}>this is us</div>
+
+        <div style={{ height: "40vh", background: "red" }}>this is me</div>
 
         {/* <Container maxWidth={"md"} style={{ padding: 0, backgroundColor:'red' }}>
             <Landing style={{ backgroundColor:'red' }}/>
