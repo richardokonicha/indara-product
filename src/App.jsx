@@ -36,6 +36,7 @@ class App extends Component {
         <Portfolio />
         {/* <Header /> */}
         <SectionOne />
+        <div style={{ height: "40vh", background: "red" }}>this is us</div>
 
         {/* <Container maxWidth={"md"} style={{ padding: 0, backgroundColor:'red' }}>
             <Landing style={{ backgroundColor:'red' }}/>

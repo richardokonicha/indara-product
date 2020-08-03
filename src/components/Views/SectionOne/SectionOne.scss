@@ -73,7 +73,7 @@ h1 {
   grid-auto-flow: dense;
   grid-gap: 40px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(30, 150px);
+  // grid-template-rows: repeat(30, 150px);
 
   &__item {
     &:nth-child(2n) {

@@ -28,8 +28,6 @@ h1 {
   grid-gap: 40px;
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  -ms-grid-rows: (150px)[30];
-      grid-template-rows: repeat(30, 150px);
 }
 
 .SectionOne__grid__item:nth-child(2n) {
