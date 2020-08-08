@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./SectionOne.css";
+import "./SectionOne.scss";
 
 export default function SectionOne() {
   return (

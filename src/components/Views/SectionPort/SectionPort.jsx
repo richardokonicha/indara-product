@@ -1,19 +1,20 @@
 import React, { Component } from "react";
-import "./SectionPort.css";
+import "./SectionPort.scss";
+
 import PaperImage from "../../Widgets/PaperImage";
 import PaperText from "../../Widgets/PaperText";
-import shoot from "./shooting.css";
+import shoot from "./shooting.scss";
 
 export default function SectionOne() {
   return (
-    <div className="Port-main" jsname="a9kxte">
+    <div className="Port-main">
       <div className="Heigh" />
       <div className="Port-main__scaler">
         <div className="Port-main__container">
           <div className="Port-main__container_text">
             <PaperText />
           </div>
-          <div className="C9bDzc">
+          <div className="C9bDzc liner">
             {/* <div className="LSNDte VdLOD yUoCvf fXx9Lc SL65ee"> */}
             {/* <img
                   className="se63he"
