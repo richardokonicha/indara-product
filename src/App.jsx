@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-// import Header from "./components/Layouts/Header";
+import Header from "./components/Layouts/Header/Header4";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Header } from "./components/Layouts";
+// import { Header } from "./components/Layouts";
 // import Landing from "./components/Views/Landing";
 import Container from "@material-ui/core/Container";
 import { createMuiTheme } from "@material-ui/core/styles";
@@ -36,7 +36,7 @@ class App extends Component {
         {/* <ThemeProvider theme={theme}> */}
         {/* <Header /> */}
         {/* <Portfolio /> */}
-        {/* <Header /> */}
+        <Header />
         <SectionPort />
         <WhatIDo />
         <SectionOne />

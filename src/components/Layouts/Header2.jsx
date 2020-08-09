@@ -22,19 +22,19 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     willChange: "transform",
     backgroundBlendMode: "lighten",
-    height: "4rem",
+    // height: "4rem",
     boxShadow: "none",
     //   borderTop: "2px solid rgba(143,196,248,.938)",
     //   padding: "1rem"
   },
   nameLogo: {
-    textTransform: 'lowercase',
+    textTransform: "lowercase",
     fontFamily: "montserrat",
     fontWeight: "600",
   },
   toolbar: {
     minHeight: 128,
-    alignItems: 'center',
+    alignItems: "center",
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(2),
   },
@@ -48,10 +48,14 @@ export default function ButtonAppBar() {
       <AppBar position="static" color="primary" className={classes.appbar}>
         <Container maxWidth={"md"}>
           <Toolbar className={classes.toolbar}>
-            <NavBar/>
+            <NavBar />
             <div className={classes.title} />
             <Button>
-              <Typography variant="h6"  color="secondary" className={classes.nameLogo}>
+              <Typography
+                variant="h6"
+                color="secondary"
+                className={classes.nameLogo}
+              >
                 konichar
               </Typography>
             </Button>
