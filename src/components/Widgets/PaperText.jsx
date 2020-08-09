@@ -7,6 +7,8 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import Link from "@material-ui/core/Link";
+
 import {
   CardContent,
   Typography,
@@ -69,21 +71,32 @@ function PaperText(props) {
           I develop modern full stack web application <br></br>Frontend & APIs
         </Typography>
         <div>
-          <IconButton color="secondary" aria-label="Follow me on github">
-            <GitHubIcon className={classes.icon} color="secondary" />
-          </IconButton>
+          <Link href="https://github.com/konichar" onClick={preventDefault}>
+            <IconButton color="secondary" aria-label="Follow me on github">
+              <GitHubIcon className={classes.icon} color="secondary" />
+            </IconButton>
+          </Link>
 
-          <IconButton color="secondary" aria-label="Reach me on Twitter">
-            <TwitterIcon className={classes.icon} />
-          </IconButton>
+          <Link href="https://twitter.com/konichar" onClick={preventDefault}>
+            <IconButton color="secondary" aria-label="Reach me on Twitter">
+              <TwitterIcon className={classes.icon} />
+            </IconButton>
+          </Link>
 
-          <IconButton color="secondary" aria-label="Contact me on LinkedIn">
-            <LinkedInIcon className={classes.icon} color="secondary" />
-          </IconButton>
+          <Link
+            href="https://linkedin.com/in/richardokonicha"
+            onClick={preventDefault}
+          >
+            <IconButton color="secondary" aria-label="Contact me on LinkedIn">
+              <LinkedInIcon className={classes.icon} color="secondary" />
+            </IconButton>
+          </Link>
 
-          <IconButton color="secondary" aria-label="contact me on Telegram">
-            <TelegramIcon className={classes.icon} color="secondary" />
-          </IconButton>
+          <Link href="https://t.me/reechee" onClick={preventDefault}>
+            <IconButton color="secondary" aria-label="contact me on Telegram">
+              <TelegramIcon className={classes.icon} color="secondary" />
+            </IconButton>
+          </Link>
         </div>
       </CardContent>
       <CardActions>

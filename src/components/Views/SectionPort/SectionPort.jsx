@@ -8,7 +8,7 @@ import shoot from "./shooting.scss";
 export default function SectionOne() {
   return (
     <div className="Port-main">
-      <div className="Heigh" />
+      {/* <div className="Heigh" /> */}
       <div className="Port-main__scaler">
         <div className="Port-main__container">
           <div className="Port-main__container_text">
