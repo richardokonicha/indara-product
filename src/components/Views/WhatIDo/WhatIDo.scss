@@ -1,0 +1,163 @@
+$white: #fff;
+$black: #000;
+$wild-sand: #f5f3f3;
+$french-gray: #cecdcf;
+$vanilla-ice: #f5dadf;
+$mischka: #e2e0e3;
+$givry: #f9dbc6;
+$bon-jour: #edebed;
+$jagged-ice: #c3e5e9;
+$shadow-green: #99c4c8;
+$conch: #c0d5cf;
+$gray-nurse: #e2e8de;
+$pampas: #f2ece8;
+$divider-color: #f1f2f4;
+
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // # if the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    //   prints a media query based on the vaule
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  //   if keys doesn't exist warn
+  @else {
+    @warn "Unfortunately no value retrieved from #breakpoint "
+            + "Available breakpoints are: #{map-keys($breakpoints)}";
+  }
+}
+
+.what_container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid $divider-color;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+
+  @include respond-to(large) {
+    max-width: 1184px;
+  }
+
+  @include respond-to(medium) {
+    max-width: 1156px;
+  }
+  @include respond-to(small) {
+    max-width: 960px;
+  }
+
+  .what_container-inner {
+    background-color: $pampas;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: calc(1200px - 10rem);
+    // padding-right: 5rem;
+    // padding-left: 5rem;
+
+    @include respond-to(large) {
+    }
+
+    @include respond-to(medium) {
+      //   padding-right: 1rem;
+      //   padding-left: 1rem;
+    }
+    @include respond-to(small) {
+    }
+    // margin-right: calc(-16px / 2);
+    // margin-left: calc(-16px / 2);
+  }
+}
+
+.what_content_right {
+  min-width: 20rem;
+  background-color: grey;
+  //   flex-basis: 33.33%;
+  flex-shrink: 1;
+  flex-grow: 1;
+  height: 20rem;
+}
+
+.what_content_left {
+  min-width: 20rem;
+  background-color: white;
+  flex-basis: 33.33%;
+  flex-shrink: 1;
+  flex-grow: 1;
+  height: 20rem;
+  color: black;
+  padding-left: 2rem;
+
+  .what_content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    color: black;
+    font-size: 40px;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    line-height: 48px;
+    padding: 0;
+    margin: 0;
+    max-width: 32rem;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+  }
+
+  .what_item {
+    flex-wrap: wrap;
+    // margin-right: calc(-16px / 2);
+    // margin-left: calc(-16px / 2);
+    display: flex;
+    box-sizing: border-box;
+
+    div {
+      //   @include respond-to(medium) {
+      //     max-width: 33.333333333333336%;
+      //     flex: 0 1 33.333333333333336%;
+      //     padding-bottom: 0;
+      //     padding-top: 0;
+      //     padding-right: calc(16px / 2);
+      //     padding-left: calc(16px / 2);
+      //   }
+      max-width: 11rem;
+      margin-bottom: 3rem;
+
+      img {
+        max-width: 2.5rem;
+        width: 2.5rem;
+        margin-bottom: 0.25rem;
+      }
+      h3 {
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        color: #505256;
+        line-height: 24px;
+        font-size: 14px;
+        padding: 0;
+      }
+    }
+  }
+}
