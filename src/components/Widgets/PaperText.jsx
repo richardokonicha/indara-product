@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
 
 function PaperText(props) {
   const classes = useStyles();
+  const preventDefault = (event) => event.preventDefault();
   return (
     <div className={classes.paper}>
       <CardContent>
@@ -71,32 +72,45 @@ function PaperText(props) {
           I develop modern full stack web application <br></br>Frontend & APIs
         </Typography>
         <div>
-          <Link href="https://github.com/konichar" onClick={preventDefault}>
-            <IconButton color="secondary" aria-label="Follow me on github">
-              <GitHubIcon className={classes.icon} color="secondary" />
-            </IconButton>
-          </Link>
-
-          <Link href="https://twitter.com/konichar" onClick={preventDefault}>
-            <IconButton color="secondary" aria-label="Reach me on Twitter">
-              <TwitterIcon className={classes.icon} />
-            </IconButton>
-          </Link>
-
-          <Link
-            href="https://linkedin.com/in/richardokonicha"
-            onClick={preventDefault}
+          <IconButton
+            color="secondary"
+            aria-label="Follow me on github"
+            href="https://github.com/konichar"
+            target="_blank"
+            rel="noopener"
           >
-            <IconButton color="secondary" aria-label="Contact me on LinkedIn">
-              <LinkedInIcon className={classes.icon} color="secondary" />
-            </IconButton>
-          </Link>
+            <GitHubIcon className={classes.icon} color="secondary" />
+          </IconButton>
 
-          <Link href="https://t.me/reechee" onClick={preventDefault}>
-            <IconButton color="secondary" aria-label="contact me on Telegram">
-              <TelegramIcon className={classes.icon} color="secondary" />
-            </IconButton>
-          </Link>
+          <IconButton
+            color="secondary"
+            aria-label="Reach me on Twitter"
+            href="https://twitter.com/konichar"
+            target="_blank"
+            rel="noopener"
+          >
+            <TwitterIcon className={classes.icon} />
+          </IconButton>
+
+          <IconButton
+            color="secondary"
+            aria-label="Contact me on LinkedIn"
+            href="https://linkedin.com/in/richardokonicha"
+            target="_blank"
+            rel="noopener"
+          >
+            <LinkedInIcon className={classes.icon} color="secondary" />
+          </IconButton>
+
+          <IconButton color="secondary" aria-label="contact me on Telegram">
+            <TelegramIcon
+              className={classes.icon}
+              color="secondary"
+              href="https://t.me/reechee"
+              target="_blank"
+              rel="noopener"
+            />
+          </IconButton>
         </div>
       </CardContent>
       <CardActions>
