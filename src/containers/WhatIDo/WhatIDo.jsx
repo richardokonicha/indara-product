@@ -6,7 +6,9 @@ export default function WhatIDo() {
     <div className="what_container">
       <div className="what_container-inner">
         <div className="what_content_right">
+          {/* add a spinning wheel */}
           <p>Beautiful & Consistant UI powered with React</p>
+          <div className="spinner"></div>
         </div>
         <div className="what_content_left">
           <div>

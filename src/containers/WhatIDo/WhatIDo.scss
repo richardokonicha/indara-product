@@ -37,8 +37,8 @@ $breakpoints: (
 }
 
 .what_container {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
   border-bottom: 1px solid $divider-color;
   box-sizing: border-box;
   display: flex;
@@ -149,4 +149,11 @@ $breakpoints: (
       }
     }
   }
+}
+
+//right section
+
+.spinner {
+  min-height: 50px;
+  border: 2px solid hsl(100, 50%, 50%);
 }
