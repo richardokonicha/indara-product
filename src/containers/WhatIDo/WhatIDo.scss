@@ -85,12 +85,16 @@ $breakpoints: (
 }
 
 .what_content_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   min-width: 20rem;
-  background-color: grey;
+  // background-color: grey;
   //   flex-basis: 33.33%;
   flex-shrink: 1;
   flex-grow: 1;
-  height: 20rem;
+  // height: 20rem;
 }
 
 .what_content_left {

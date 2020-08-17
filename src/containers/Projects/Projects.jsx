@@ -21,7 +21,6 @@ export default function SectionOne() {
                     className="SectionOne__ImageIss"
                     src={project.image}
                     alt={project.alt}
-                    srcset=""
                   />
                 </article>
               </div>
