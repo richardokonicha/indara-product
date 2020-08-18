@@ -1,6 +1,6 @@
 import React from "react";
 import "./WhatIDo.scss";
-import App from "./IDoAnimate.js";
+import App from "./IDoAnimate2.js";
 
 export default function WhatIDo() {
   return (
