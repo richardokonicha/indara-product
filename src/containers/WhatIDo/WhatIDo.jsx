@@ -1,6 +1,6 @@
 import React from "react";
 import "./WhatIDo.scss";
-import App from "./IDoAnimate2.js";
+import IDoAnimate from "./IDoAnimate2.js";
 
 export default function WhatIDo() {
   return (
@@ -8,7 +8,7 @@ export default function WhatIDo() {
       <div className="what_container-inner">
         <div className="what_content_right">
           {/* add a spinning wheel */}
-          <App />
+          <IDoAnimate />
         </div>
         <div className="what_content_left">
           <div>

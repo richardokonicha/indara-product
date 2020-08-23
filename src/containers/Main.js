@@ -7,6 +7,8 @@ import React, { Component } from "react";
 
 import Projects from "./Projects/Projects";
 import WhatIDo from "./WhatIDo/WhatIDo";
+import IDoAnimate from "./WhatIDo/IDoAnimate2.js";
+
 // import StartupProject from "./StartupProjects/StartupProject";
 // import Achievement from "./achievement/Achievement";
 // import Blogs from "./blogs/Blogs";
@@ -24,6 +26,7 @@ export default class Main extends Component {
       <div>
         <WhatIDo />
         <Projects />
+        <IDoAnimate />
 
         {/* <Header />
         <Greeting />

@@ -64,10 +64,10 @@ class Circle {
   }
 }
 
-class App extends Component {
+class IDoAnimate extends Component {
   constructor(props) {
     super(props);
-    this.state = { testVarible: "this is a test", circles: [] };
+    this.state = { testVarible: "this is a test", circles: [], ctx: Object };
     this.canvasRef = React.createRef();
   }
 
@@ -77,8 +77,15 @@ class App extends Component {
     }));
   };
 
+  ctxCreate = () => {
+    const canvas = this.canvasRef.current;
+    this.setState((state) => ({
+      context: canvas.getContext("2d"),
+    }));
+  };
+
   createCircles = () => {
-    let speed = 0.01;
+    let speed = 0.06;
 
     for (let i = 0; i < 400; i++) {
       let color = "hsl(" + random(220, 180) + ", 100%, 50%)";
@@ -120,10 +127,9 @@ class App extends Component {
         speed
       );
       this.addCircle(newCircle);
-      //   circles.push(new Circle(color, angle, rad, radX, radY, a, false));
     }
     for (let i = 0; i < 800; i++) {
-      let color = "hsl(" + random(220, 180) + ", 100%, 50%)";
+      let color = "hsl(" + random(220, 180) + ", 100%, 0%)";
       let angle = random(Math.PI * 2);
       let rad = random(1.5, 0.5);
       let radX = random(40, 30);
@@ -148,7 +154,8 @@ class App extends Component {
     const canvas = this.canvasRef.current;
     let W = canvas.width;
     let H = canvas.height;
-    const context = canvas.getContext("2d");
+    // const context = canvas.getContext("2d");
+    let context = this.state.context;
 
     context.clearRect(0, 0, W, H);
     this.state.circles.forEach((x) => x.update(context, W, H));
@@ -158,15 +165,17 @@ class App extends Component {
 
   componentDidMount() {
     const canvas = this.canvasRef.current;
-    const context = canvas.getContext("2d");
-    context.fillStyle = "rgba(0, 0, 200, 0.5)";
-    context.fillRect(0, 0, canvas.width, canvas.height);
+    // const context = canvas.getContext("2d");
+    this.ctxCreate();
 
-    context.fillStyle = "rgba(0, 200, 200, 0.5)";
-    context.fillRect(130, 0, 200, 100);
+    // context.fillStyle = "rgba(0, 0, 200, 0.5)";
+    // context.fillRect(0, 0, canvas.width, canvas.height);
 
-    context.fillStyle = "rgba(200, 0, 200, 0.5)";
-    context.fillRect(-50, 60, 220, 100);
+    // context.fillStyle = "rgba(0, 200, 200, 0.5)";
+    // context.fillRect(130, 0, 200, 100);
+
+    // context.fillStyle = "rgba(200, 0, 200, 0.5)";
+    // context.fillRect(-50, 60, 220, 100);
     // this.onMove();
 
     this.createCircles();
@@ -186,4 +195,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default IDoAnimate;
