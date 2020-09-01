@@ -72,3 +72,9 @@ export const folioProjects = {
     },
   ],
 };
+
+export const WhatIDoText = {
+  heading: "What I do",
+  subheading:
+    "I create beautiful & consistent user friendly UI driven by React",
+};

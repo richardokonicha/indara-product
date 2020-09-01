@@ -37,8 +37,8 @@ $breakpoints: (
 }
 
 .what_container {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   border-bottom: 1px solid $divider-color;
   box-sizing: border-box;
   display: flex;
@@ -64,6 +64,7 @@ $breakpoints: (
     background-color: $pampas;
     flex-wrap: wrap;
     display: flex;
+
     justify-content: center;
     width: 100%;
     max-width: calc(1200px - 10rem);
@@ -95,6 +96,7 @@ $breakpoints: (
   flex-shrink: 1;
   flex-grow: 1;
   // height: 20rem;
+  background-color: white;
 }
 
 .what_content_left {
@@ -103,34 +105,38 @@ $breakpoints: (
   flex-basis: 33.33%;
   flex-shrink: 1;
   flex-grow: 1;
-  height: 20rem;
+  // height: 2rem;
   color: black;
   padding-left: 2rem;
 
-  div {
-    display: block;
-    text-align: center;
+  .div_outside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: left;
     font-family: $pTextFamily;
     position: relative;
 
-    h2 {
-      font-size: 45px;
+    h3 {
+      font-size: 18px;
       font-weight: 600;
+      padding-bottom: 0.8rem;
+      border-bottom: 0.1px solid hsl(0, 0%, 80%);
     }
+
     p {
-      font-size: 35px;
-      font-weight: 500;
+      margin-top: 0;
+      font-size: 14px;
     }
   }
 
   .what_item {
     flex-wrap: wrap;
-    // margin-right: calc(-16px / 2);
-    // margin-left: calc(-16px / 2);
     display: flex;
     box-sizing: border-box;
 
-    div {
+    .div_outside {
       max-width: 11rem;
       margin-bottom: 3rem;
 
@@ -160,4 +166,16 @@ $breakpoints: (
 .spinner {
   min-height: 50px;
   border: 2px solid hsl(100, 50%, 50%);
+}
+
+.card {
+  width: 240px;
+  margin: 2rem;
+  padding: 64px 32px;
+}
+.div_inside {
+  display: flex;
+  flex-direction: row;
+  // background-color: hsl(100, 50%, 50%);
+  padding-top: 1rem;
 }

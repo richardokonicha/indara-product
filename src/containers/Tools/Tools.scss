@@ -1,0 +1,64 @@
+$white: #fff;
+$black: #000;
+$wild-sand: #f5f3f3;
+$french-gray: #cecdcf;
+$vanilla-ice: #f5dadf;
+$mischka: #e2e0e3;
+$givry: #f9dbc6;
+$bon-jour: #edebed;
+$jagged-ice: #c3e5e9;
+$shadow-green: #99c4c8;
+$conch: #c0d5cf;
+$gray-nurse: #e2e8de;
+$pampas: #f2ece8;
+$divider-color: #f1f2f4;
+
+$pTextFamily: "Montserrat";
+
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // # if the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    //   prints a media query based on the vaule
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  //   if keys doesn't exist warn
+  @else {
+    @warn "Unfortunately no value retrieved from #breakpoint "
+            + "Available breakpoints are: #{map-keys($breakpoints)}";
+  }
+}
+
+.div_inside {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.card {
+  min-width: 256px;
+}
+.tools {
+  .tool-header {
+    text-align: center;
+    font-size: 56px;
+  }
+}
+
+.card_h {
+  font-size: 20px;
+  text-align: center;
+}
+
+.card_p {
+  list-style: none;
+  // border: 2px solid red;
+  text-align: center;
+  padding: 0;
+}

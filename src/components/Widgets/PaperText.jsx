@@ -30,12 +30,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "300px",
   },
   heading: {
-    fontSize: "2.1rem",
+    fontSize: "36px",
     fontFamily: "Montserrat",
-    fontWeight: "800",
+    fontWeight: "700",
   },
   headingParagraph: {
-    fontSize: "0.7rem",
+    fontSize: "18px",
     fontFamily: "Montserrat",
     marginTop: "20px",
     marginBottom: "20px",
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0.8rem",
   },
   btn: {
-    fontSize: "0.5rem",
+    fontSize: "14px",
     fontFamily: "Montserrat",
     fontWeight: "500",
   },
@@ -128,7 +128,7 @@ function PaperText(props) {
             variant="button"
             display="block"
             color="secondary"
-            className={classes.btn}
+            // className={classes.btn}
           >
             Explore
           </Typography>

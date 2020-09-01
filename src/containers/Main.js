@@ -7,7 +7,10 @@ import React, { Component } from "react";
 
 import Projects from "./Projects/Projects";
 import WhatIDo from "./WhatIDo/WhatIDo";
+import Tools from "./Tools/Tools";
+
 import IDoAnimate from "./WhatIDo/IDoAnimate2.js";
+import { WhatIDoText } from "../porfolio";
 
 // import StartupProject from "./StartupProjects/StartupProject";
 // import Achievement from "./achievement/Achievement";
@@ -22,11 +25,13 @@ import IDoAnimate from "./WhatIDo/IDoAnimate2.js";
 
 export default class Main extends Component {
   render() {
+    console.log(WhatIDoText);
     return (
       <div>
-        <WhatIDo />
+        <WhatIDo text={WhatIDoText} align={{ flexDirection: "rowReverse" }} />
+        <Tools />
+
         <Projects />
-        <IDoAnimate />
 
         {/* <Header />
         <Greeting />
